@@ -9,6 +9,7 @@ public class Jogador
 {
     // instance variables - replace the example below with your own
     private String nome;
+    public Pontuacao score;
     /**
      * Constructor for objects of class Jogador
      */
