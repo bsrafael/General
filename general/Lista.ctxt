@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Lista
+comment0.text=\n\ Lista\ de\ jogadores.\n\n\ @author\ Rafael\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=Lista()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Lista\n
+comment2.params=val
+comment2.target=void\ push(Jogador)
+comment3.params=nome
+comment3.target=void\ insereJogador(java.lang.String)
+comment3.text=\n\ insereJogador\ (string\ nome)\n\ @param\ nome\ nome\ recebido\ da\ UI.\n\ \n
+comment4.params=
+comment4.target=java.lang.String\ getStrLista()
+comment5.params=name
+comment5.target=Nodo\ procuraNome(java.lang.String)
+numComments=6

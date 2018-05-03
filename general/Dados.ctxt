@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Dados
+comment0.text=\n\ "Copo\ de\ Dados"\ para\ o\ jogo.\ Cont\u00E9m\ 5\ dados\ de\ seis\ lados.\n\n\ @author\ Rafael\n\ @version\ V1.0\n
+comment1.params=
+comment1.target=Dados()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ CopoDados\n
+comment2.params=
+comment2.target=int\ setDado()
+comment3.params=required_index
+comment3.target=int\ getDado(int)
+comment4.params=
+comment4.target=void\ geraTodosOsDados()
+comment5.params=
+comment5.target=void\ imprimeDados()
+numComments=6

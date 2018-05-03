@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Jogador
+comment0.text=\n\ Write\ a\ description\ of\ class\ Jogador\ here.\n\n\ @author\ Rafael\n\ @version\ 1.0\n
+comment1.params=name
+comment1.target=Jogador(java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Jogador\n
+comment2.params=name
+comment2.target=java.lang.String\ setNome(java.lang.String)
+comment2.text=\n\ @param\ \ name\ \ nome\ a\ ser\ recebido\ da\ interface\n\ @return\ \ \ \ nome\ (min\u00FAsculo)\ a\ ser\ atribu\u00EDdo\ para\ a\ inst\u00E2ncia\ de\ Jogador\n
+comment3.params=points
+comment3.target=void\ addPontuacao(int)
+comment3.text=\n\ addPontuacao\ (int\ points)\ -\ adiciona\ a\ pontuacao\ ao\ jogador.\n\ \ @param\ points\ pontuacao\ a\ ser\ recebida\ da\ interface\n\ \ @return\ pontuacao\ a\ ser\ atribu\u00EDda\ para\ a\ inst\u00E2ncia\ de\ Jogador\n
+comment4.params=
+comment4.target=java.lang.String\ getNome()
+comment5.params=
+comment5.target=int\ getPontuacao()
+numComments=6

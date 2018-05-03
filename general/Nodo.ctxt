@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Nodo
+comment0.text=\n\ Nodo\ para\ a\ Lista.\n\n\ @author\ Rafael\n\ @version\ V1.0\n
+comment1.params=newnode
+comment1.target=Nodo(Jogador)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Nodo\n
+numComments=2
