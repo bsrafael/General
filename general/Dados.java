@@ -7,10 +7,8 @@ import java.util.Random;
  */
 public class Dados
 {
-    public int[] dados = new int[5];
-    /**
-     * Constructor for objects of class CopoDados
-     */
+    private int[] dados = new int[5];
+    
     public Dados()
     {
         int i;
@@ -18,90 +16,42 @@ public class Dados
             dados[i] = 0;
     }
 
-    public int setDado()
+    private int setDado()
     {
         Random rand = new Random();
         return rand.nextInt(6) + 1; //retorna 1 + número entre 0 a 5 
     }
     public int getDado(int required_index)
     {
-        return dados[required_index];
+        return this.dados[required_index];
     }
     
-    public void geraTodosOsDados()
+    public int[] getTodosOsDados()
     {
-        int i, j, aux;
-        for (i=0;i<5;i++)
-            dados[i] = setDado();
+        return this.dados;
+    }
 
-        //ordenação dos dados.  
-        for (i=0; i<5; i++)
-        {
-            for (j=5-1; j>=0; j--)
-            {
-                if (dados[i] > dados[j])
-                {
-                    aux = dados[i];
-                    dados[i] = dados[j];
-                    dados[j] = aux;
-                }
-            }
-            
-        }
-    }
-    
-    public void imprimeDados()
+    public String getStrDados()
     {
+        String output="  ";
+        int[] d = this.dados;
         int i;
 
-        int[] value = this.dados;
+        for (i=0; i<d.length; i++)
+        {
+            output = output + "∞ Dado "+ (i+1) + ": " + d[i] + "\t";
+        }
+        return output;
+    }
 
-        //linha 0: borda superior
-        for (i=0; i<value.length; i++)
-            System.out.print("\t╔═══════╗");
-        System.out.println("");
+    public void geraTodosOsDados()
+    {
+        for (int i=0;i<5;i++)
+            this.dados[i] = setDado();
+    }
 
-        //linha 1: ponto branco quando 1; esquerdo quando 2 e 3; esquerdo e direito quando 4,5,6
-        for (i=0; i<value.length; i++)
-            if(value[i] > 3)
-                System.out.print("\t║ •   • ║");
-            else if(value[i] == 1)
-                System.out.print("\t║       ║");
-            else 
-                System.out.print("\t║ •     ║");
-        System.out.println("");
-
-        //linha 2: ponto centralizado quando ímpar; branco quando 2 e 4; esquerdo e direito quando 6.
-        for (i=0; i<value.length; i++)
-            if(value[i] % 2 == 1)
-                System.out.print("\t║   •   ║");
-            else if(value[i] == 6)
-                System.out.print("\t║ •   • ║");
-            else 
-                System.out.print("\t║       ║");
-        System.out.println("");
-
-
-        //linha 3: ponto branco quando 1; direito quando 2 e 3; esquerdo e direito quando 4,5,6
-        for (i=0; i<value.length; i++)
-            if(value[i] > 3)
-                System.out.print("\t║ •   • ║");
-            else if(value[i] == 1)
-                System.out.print("\t║       ║");
-            else 
-                System.out.print("\t║     • ║");
-        System.out.println("");
-
-        //linha 4: borda inferior
-        for (i=0; i<value.length; i++)
-            System.out.print("\t╚═══════╝");
-        System.out.println("");
-
-        //linha 5: referência do dado
-        for (i=0; i<value.length; i++)
-            System.out.print("\t dado: " + (i+1) );
-        System.out.println("");
-        
-        
+    public void trocaDado(int dado_number)
+    {
+        this.dados[dado_number - 1] = setDado();
     }
 }

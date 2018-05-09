@@ -9,20 +9,25 @@ public class Jogador
 {
     // instance variables - replace the example below with your own
     private String nome;
-    public Pontuacao score;
+    private int countParticipacoes;
+    private int countVitorias;
+    private int countEmpates;
+    private int somatorioPontos;
+
     /**
      * Constructor for objects of class Jogador
      */
     public Jogador(String name)
     {
         // initialise instance variables
-        this.nome = setNome(name);
+        this.nome               = setNome(name);
+        this.countParticipacoes = 0;
+        this.countEmpates       = 0;
+        this.countVitorias      = 0;
+        this.somatorioPontos    = 0;
     }
 
-    /**
-     * @param  name  nome a ser recebido da interface
-     * @return    nome (minúsculo) a ser atribuído para a instância de Jogador
-     */
+
     public String setNome(String name)
     {
         return name.toLowerCase();
@@ -31,6 +36,21 @@ public class Jogador
     public String getNome()
     {
         return this.nome;
+    }
+
+    public void aumentaParticipacoes()
+    {
+        this.countParticipacoes++;
+    }
+
+    public void aumentaEmpates()
+    {
+        this.countEmpates++;
+    }
+
+    public void aumentaVitorias()
+    {
+        this.countVitorias++;
     }
   
     

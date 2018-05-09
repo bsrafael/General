@@ -76,6 +76,11 @@ public class UI
 		System.out.println(LJogadores.getStrLista());
 	}
 
+	private void exibirRanking(Lista LJogadores)
+	{
+		
+	}
+
 	private void iniciarJogo()
 	{
 		Jogador j1;
