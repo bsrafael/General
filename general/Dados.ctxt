@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=void\ geraTodosOsDados()
 comment7.params=dado_number
 comment7.target=void\ trocaDado(int)
-numComments=8
+comment8.params=
+comment8.target=void\ ordenaDados()
+numComments=9

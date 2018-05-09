@@ -67,18 +67,20 @@ public class UI
 		System.out.println("Digite o nome do novo jogador: ");
 		nome = scan.nextLine();
 		scan.close();
-		LJogadores.insereJogador(nome);
+		if (LJogadores.procuraNome(nome) == null)
+			LJogadores.insereJogador(nome);
+		else
+			System.out.println("Nome já cadastrado.");
+
 	}
 
 	private void exibirJogadores(Lista LJogadores)
 	{
 		System.out.println("\nJogadores já cadastrados: ");
-		System.out.println(LJogadores.getStrLista());
-	}
-
-	private void exibirRanking(Lista LJogadores)
-	{
-		
+		//nome vitoria participacoes empates pontos
+		//							   |  0    |    0    |   0    |
+		System.out.println("\t Nome \t | Jogos | Empates | Pontos |");
+		System.out.println(LJogadores.getStrLista2());
 	}
 
 	private void iniciarJogo()

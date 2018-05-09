@@ -34,12 +34,12 @@ public class Dados
     public String getStrDados()
     {
         String output="  ";
-        int[] d = this.dados;
         int i;
-
-        for (i=0; i<d.length; i++)
+        ordenaDados();
+        
+        for (i=0; i<dados.length; i++)
         {
-            output = output + "∞ Dado "+ (i+1) + ": " + d[i] + "\t";
+            output = output + "∞ Dado "+ (i+1) + ": " + dados[i] + "\t";
         }
         return output;
     }
@@ -48,10 +48,26 @@ public class Dados
     {
         for (int i=0;i<5;i++)
             this.dados[i] = setDado();
+        ordenaDados();
     }
 
     public void trocaDado(int dado_number)
     {
         this.dados[dado_number - 1] = setDado();
+    }
+
+    private void ordenaDados()
+    {
+        int aux;
+        for(int i = 0; i<5; i++){
+            for(int j = 0; j<4; j++){
+                if(this.dados[j] > this.dados[j + 1]){
+                    aux = this.dados[j];
+                    this.dados[j] = this.dados[j+1];
+                    this.dados[j+1] = aux;
+                }
+            }
+        }
+
     }
 }

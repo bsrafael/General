@@ -9,11 +9,12 @@ public class Jogador
 {
     // instance variables - replace the example below with your own
     private String nome;
-    private int countParticipacoes;
+
     private int countVitorias;
+    private int countParticipacoes;
     private int countEmpates;
     private int somatorioPontos;
-
+    
     /**
      * Constructor for objects of class Jogador
      */
@@ -52,6 +53,16 @@ public class Jogador
     {
         this.countVitorias++;
     }
-  
+    public void aumentaPontos(int pts)
+    {
+        this.somatorioPontos += pts;
+    }
+
+    public String getStrJogador()
+    {
+        String str = " ";
+        str = str + getNome() +"\t\t | "+countVitorias +"\t | "+countParticipacoes +"\t |    "+countEmpates +"\t |   "+somatorioPontos +"\t | ";   
+        return str;
+    }
     
 }

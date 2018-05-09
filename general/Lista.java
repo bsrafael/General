@@ -26,11 +26,6 @@ public class Lista
         this.inicio = node;
     }
 
-    /**
-     * insereJogador (string nome)
-     * @param nome nome recebido da UI.
-     * 
-     */
     public void insereJogador (String nome)
     {
         Jogador j = new Jogador(nome);
@@ -48,6 +43,26 @@ public class Lista
             str = str + "\n" + nav.info.getNome();
         }
         return str;
+    }
+
+    public String getStrLista2 ()
+    {
+        Nodo nav = this.inicio;
+        String strLista;
+        if (nav == null)
+        {
+            strLista = "nenhum jogador cadastrado.";
+        }
+        else
+        {
+            strLista = nav.info.getStrJogador();
+            while (nav.prox != null)
+            {
+                nav = nav.prox;
+                strLista = strLista + "\n" + nav.info.getStrJogador();
+            }
+        }
+        return strLista;
     }
 
     public Nodo procuraNome (String name)
