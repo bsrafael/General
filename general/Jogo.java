@@ -15,7 +15,6 @@ public class Jogo
 
     public Jogo(Jogador j1, Jogador j2)
     {
-        UI.exibe("<- novo jogo ->");
         player1 = j1;
         player2 = j2;
         
@@ -108,7 +107,6 @@ public class Jogo
             }
             else
             {
-                UI.exibe("problema seu. Já implemento o que acontece aqui.");
                 break;
             }
             rolagensRestantes--;
@@ -119,6 +117,7 @@ public class Jogo
         UI.exibe("\n\n\n");
         UI.exibe("• Estes são seus dados:");
         UI.exibe(this.copoDados.getStrDados());
+        UI.exibe("\n\n");
 
         pts = acao();
 
@@ -143,7 +142,7 @@ public class Jogo
         UI.exibe("  ├─ 3. pontuar como Combinação  | "+pontuacao[3] + " pontos");
         UI.exibe("  ├─ 4. pontuar como Quadra      | "+pontuacao[4] + " pontos");
         UI.exibe("  └─ 5. pontuar como General     | "+pontuacao[5] + " pontos");
-
+        UI.exibe("\n\n");
         do
         {
             i = UI.leInt();
@@ -259,8 +258,7 @@ public class Jogo
         int resposta = 0;
         int[] dados = this.copoDados.getTodosOsDados();
         if  (dados[0] == dados[1] && dados[1] == dados[2] &&
-             dados[2] == dados[3] && dados[3] == dados[4] &&
-             dados[4] == dados[5])
+             dados[2] == dados[3] && dados[3] == dados[4])
 
             resposta = 5*dados[0] + 50;
         //code

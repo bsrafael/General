@@ -65,6 +65,7 @@ public class UI
 		Scanner scan = new Scanner(System.in);
 		String nome;
 		System.out.println("Digite o nome do novo jogador: ");
+		System.out.println("      entre 4 e 11 caracteres.");
 		nome = scan.nextLine();
 		scan.close();
 		if (LJogadores.procuraNome(nome) == null)
@@ -78,9 +79,8 @@ public class UI
 	{
 		System.out.println("\nJogadores já cadastrados: ");
 		//nome vitoria participacoes empates pontos
-		//							   |  0    |    0    |   0    |
-		System.out.println("\t Nome \t | Jogos | Empates | Pontos |");
-		System.out.println(LJogadores.getStrLista2());
+		System.out.println(" Nome \t\t | Ganhou | Jogos | Empates | Pontos |");
+		System.out.println(LJogadores.getStrLista());
 	}
 
 	private void iniciarJogo()

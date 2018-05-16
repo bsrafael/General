@@ -43,25 +43,42 @@ public class Jogador
     {
         this.countParticipacoes++;
     }
+    public int getParticipacoes()
+    {
+        return this.countParticipacoes;
+    }
 
     public void aumentaEmpates()
     {
         this.countEmpates++;
+    }
+    public int getEmpates()
+    {
+        return this.countEmpates;
     }
 
     public void aumentaVitorias()
     {
         this.countVitorias++;
     }
+    public int getVitorias()
+    {
+        return this.countVitorias;
+    }
+
     public void aumentaPontos(int pts)
     {
         this.somatorioPontos += pts;
+    }
+    public int getPontos()
+    {
+        return this.somatorioPontos;
     }
 
     public String getStrJogador()
     {
         String str = " ";
-        str = str + getNome() +"\t\t | "+countVitorias +"\t | "+countParticipacoes +"\t |    "+countEmpates +"\t |   "+somatorioPontos +"\t | ";   
+        str = str + getNome() +"\t |   "+countVitorias +"    |   "+countParticipacoes +"   |    "+countEmpates +"    |    "+somatorioPontos;   
         return str;
     }
     
